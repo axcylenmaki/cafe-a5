@@ -27,7 +27,7 @@
             <div>
               <div class="fw-semibold mb-1">Info cepat</div>
               <div class="text-muted-2 small">
-                ✓ Tempat ibadah • ✓ Toilet • ✓ Parkir • ✓ P3K<br>
+                ✓ Tempat ibadah • ✓ Toilet • ✓ Parkir • ✓ UKS<br>
                 ✓ Area produksi & packaging • ✓ Tempat sampah/daur ulang
               </div>
             </div>
@@ -42,8 +42,8 @@
             <a href="#fasilitas" class="btn btn-outline-brand">
               <i class="bi bi-building me-1"></i> Fasilitas
             </a>
-            <a href="#denah" class="btn btn-outline-brand">
-              <i class="bi bi-map me-1"></i> Denah
+            <a href="#kepuasan" class="btn btn-outline-brand">
+              <i class="bi bi-map me-1"></i> kepuasan
             </a>
           </div>
         </div>
@@ -160,9 +160,9 @@
             'icon'  => 'bi-shop'
           ],
           [
-            'title' => 'P3K',
-            'desc'  => 'Tersedia perlengkapan P3K untuk kondisi darurat ringan.',
-            'img'   => 'assets/img/facilities/p3k.jpg',
+            'title' => 'UKS',
+            'desc'  => 'Tersedia ruang UKS untuk kondisi darurat ringan.',
+            'img'   => 'assets/img/facilities/p3k.jpeg',
             'badge_bg' => 'rgba(11,127,117,.08)',
             'badge_border' => 'rgba(11,127,117,.18)',
             'badge_color' => 'var(--primary)',
@@ -226,32 +226,72 @@
     </div>
   </section>
 
-  <!-- DENAH -->
-  <section id="denah" class="mt-4">
+  <!-- KEPUASAN PELANGGAN -->
+  <section id="kepuasan" class="mt-4">
     <div class="card-soft p-4 p-lg-5">
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-2 mb-3">
         <div>
-          <h2 class="h4 section-title fw-semibold mb-1">Denah / Layout Area</h2>
-          <div class="text-muted-2">Denah membantu pengunjung menemukan area penting dengan cepat.</div>
+          <h2 class="h4 section-title fw-semibold mb-1">Kepuasan Pengunjung</h2>
+          <div class="text-muted-2">Bantu kami meningkatkan pelayanan dengan memberi penilaian.</div>
         </div>
-        <div class="text-muted-2 small">*File: <code>assets/img/denah/denah.png</code></div>
       </div>
 
-      <div class="ratio ratio-16x9 rounded-4 overflow-hidden" style="border:1px solid rgba(11,127,117,.14);">
-        <img
-          src="assets/img/denah/denah.png"
-          alt="Denah Cafe"
-          style="width:100%; height:100%; object-fit:contain; background:#fff;"
-          onerror="this.src='https://dummyimage.com/1200x675/eeeeee/777777&text=Denah+Belum+Ada';"
-        >
-      </div>
+      <form id="formKepuasan" class="mb-4">
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Seberapa puas Anda dengan pelayanan kami?</label>
+          <select class="form-select" id="rating" required>
+            <option value="">-- Pilih --</option>
+            <option value="puas">Puas</option>
+            <option value="cukup">Cukup Puas</option>
+            <option value="tidak">Tidak Puas</option>
+          </select>
+        </div>
 
-      <div class="mt-3 text-muted-2" style="line-height:1.7;">
-        <strong>Petunjuk singkat:</strong>
-        Denah ini menampilkan area utama, fasilitas, serta jalur akses. Jika kamu ingin,
-        kita bisa tambahkan label angka (1–9) sesuai daftar fasilitas di atas.
+        <button type="submit" class="btn btn-brand">
+          <i class="bi bi-send me-1"></i> Kirim Penilaian
+        </button>
+      </form>
+
+      <!-- HASIL -->
+      <div id="hasilKepuasan" style="display:none;">
+        <div class="card-soft p-3" id="hasilBox"></div>
       </div>
     </div>
   </section>
+
+  <script>
+    document.getElementById("formKepuasan").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const rating = document.getElementById("rating").value;
+      const hasil = document.getElementById("hasilKepuasan");
+      const box = document.getElementById("hasilBox");
+
+      hasil.style.display = "block";
+
+      if(rating === "puas"){
+        box.innerHTML = `
+          <div class="fw-semibold text-success mb-2">Terima kasih! 😊</div>
+          <div class="text-muted-2">Kami senang Anda puas dengan pelayanan Cafe A5.</div>
+        `;
+      }
+      else if(rating === "cukup"){
+        box.innerHTML = `
+          <div class="fw-semibold text-warning mb-2">Terima kasih atas masukannya 🙏</div>
+          <div class="text-muted-2">Kami akan terus berusaha meningkatkan kualitas layanan.</div>
+        `;
+      }
+      else{
+        box.innerHTML = `
+          <div class="fw-semibold text-danger mb-2">Mohon maaf atas ketidaknyamanannya 😔</div>
+          <div class="text-muted-2 mb-2">Silakan sampaikan keluhan langsung ke admin agar bisa segera kami perbaiki.</div>
+          <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-brand">
+            <i class="bi bi-whatsapp me-1"></i> Hubungi Admin
+          </a>
+        `;
+      }
+    });
+  </script>
+
 
 </main>

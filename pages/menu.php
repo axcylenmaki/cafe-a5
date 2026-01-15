@@ -4,7 +4,7 @@
     <div>
       <h1 class="fw-semibold mb-1" style="color: var(--primary);">Menu</h1>
       <div class="text-muted-2" style="font-size: 1.05rem; line-height:1.7;">
-        Klik tiap menu untuk lihat <strong>rasa</strong> dan <strong>komposisi kasar</strong>.
+        Klik tiap menu untuk lihat <strong>rasa</strong> dan <strong>bahan utama</strong>.
       </div>
     </div>
     <a href="?page=order" class="btn btn-brand">
@@ -24,18 +24,20 @@
         'img' => 'assets/img/menu/sala-lauak.jpg',
         'tag' => 'Best Seller',
         'tagStyle' => 'background: rgba(244,166,65,.14); border-color: rgba(244,166,65,.22); color:#7a4d00;',
-        'taste' => 'Camilan gurih khas Minangkabau dengan tekstur lembut dan aroma ikan yang khas. Renyah di luar, lembut di dalam.',
-        'comp' => 'Tepung beras/tepung terigu, ikan (ikan asin/ikan teri sesuai resep), bumbu (bawang, garam, rempah), daun bawang/seledri, minyak goreng.'
+        'taste' => 'Camilan gurih khas Minang—renyah di luar, lembut di dalam, dengan aroma ikan yang khas dan bikin nagih.',
+        'ingredients' => 'Tepung beras/terigu, ikan (teri/ikan asin sesuai resep), bawang & rempah, daun bawang/seledri, minyak goreng.',
+        'pairing' => 'Nikmat ditemani Es Tebak atau teh hangat. Cocok untuk semua usia.'
       ],
       [
         'id' => 'sala-pedas',
         'name' => 'Sala Lauak Pedas',
         'price' => 6000,
-        'img' => 'assets/img/menu/sala-lauak-isi.jpg', // boleh ganti jadi sala-lauak-pedas.jpg kalau ada
+        'img' => 'assets/img/menu/sala-lauak-isi.jpg', // ganti sala-lauak-pedas.jpg kalau ada
         'tag' => 'Pedas Favorit',
         'tagStyle' => 'background: rgba(243,166,200,.16); border-color: rgba(243,166,200,.24); color:#8b2f4a;',
-        'taste' => 'Varian sala lauak dengan tambahan cabai. Gurihnya tetap terasa, ditutup pedas yang “nendang” tapi masih nyaman buat keluarga.',
-        'comp' => 'Adonan sala lauak + cabai (iris/halus), bumbu pedas, rempah, minyak goreng.'
+        'taste' => 'Gurih khas sala lauak dengan sentuhan cabai—pedasnya “nendang”, tapi tetap nyaman dinikmati bareng keluarga.',
+        'ingredients' => 'Adonan sala lauak, cabai (iris/halus), bawang & rempah, minyak goreng.',
+        'pairing' => 'Pas buat yang suka pedas. Enak dipadu Es Tebak biar makin segar.'
       ],
       [
         'id' => 'es-tebak',
@@ -44,8 +46,9 @@
         'img' => 'assets/img/menu/es-tebak.jpg',
         'tag' => 'Favorit Keluarga',
         'tagStyle' => 'background: rgba(11,127,117,.10); border-color: rgba(11,127,117,.18); color: var(--primary);',
-        'taste' => 'Minuman dingin khas Sumatra Barat: segar, manis pas, dengan campuran buah dan topping yang bikin “ramai” di mulut.',
-        'comp' => 'Es serut, buah-buahan (opsional sesuai stok), santan/susu, gula/sirop, topping (kolang-kaling, tape, ketan hitam, cincau, dll).'
+        'taste' => 'Minuman dingin khas Sumatra Barat yang segar, manis pas, dengan topping yang “rame” dan bikin adem.',
+        'ingredients' => 'Es serut, buah (sesuai stok), santan/susu, gula/sirop, topping (kolang-kaling, tape, ketan hitam, cincau, dll).',
+        'pairing' => 'Paling pas disandingkan dengan Sala Lauak. Seger buat siang-siang!'
       ],
     ];
 
@@ -55,8 +58,8 @@
         'name' => 'Teh Talua',
         'price' => 12000,
         'img' => 'assets/img/menu/teh-talua.jpg',
-        'taste' => 'Hangat, manis lembut, dan terasa “bertenaga”. Cocok buat yang suka minuman tradisional.',
-        'comp' => 'Teh, telur, gula, perasan jeruk nipis (opsional), sedikit bumbu (opsional).'
+        'taste' => 'Hangat, manis lembut, dan terasa “bertenaga”. Cocok untuk yang suka minuman tradisional.',
+        'ingredients' => 'Teh, telur, gula, jeruk nipis (opsional), sedikit bumbu (opsional).'
       ],
       [
         'id' => 'kopi-minang',
@@ -64,15 +67,15 @@
         'price' => 10000,
         'img' => 'assets/img/menu/kopi-minang.jpg',
         'taste' => 'Aroma kopi kuat, pahitnya seimbang, cocok buat pecinta kopi hitam.',
-        'comp' => 'Bubuk kopi, air panas, gula (opsional).'
+        'ingredients' => 'Bubuk kopi, air panas, gula (opsional).'
       ],
       [
         'id' => 'air-mineral',
         'name' => 'Air Mineral',
         'price' => 5000,
-        'img' => 'assets/img/menu/air-mineral.jpg', // kalau ga ada gambar, aman ada fallback
+        'img' => 'assets/img/menu/air-mineral.jpg',
         'taste' => 'Pilihan simpel dan aman untuk semua usia.',
-        'comp' => 'Air mineral kemasan.'
+        'ingredients' => 'Air mineral kemasan.'
       ],
       [
         'id' => 'teh-manis',
@@ -80,7 +83,7 @@
         'price' => 7000,
         'img' => 'assets/img/menu/teh-manis.jpg',
         'taste' => 'Manisnya pas, ringan, cocok untuk teman ngemil.',
-        'comp' => 'Teh, gula, air panas / es.'
+        'ingredients' => 'Teh, gula, air panas / es.'
       ],
     ];
 
@@ -128,29 +131,29 @@
                   </span>
                 </div>
 
-                <div class="mt-2">
-                  <a class="btn btn-outline-brand btn-sm" data-bs-toggle="collapse" href="#detail-<?= $m['id'] ?>" role="button" aria-expanded="false" aria-controls="detail-<?= $m['id'] ?>">
+                <div class="mt-2 d-flex gap-2 flex-wrap">
+                  <button
+                    type="button"
+                    class="btn btn-outline-brand btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-<?= $m['id'] ?>">
                     <i class="bi bi-info-circle me-1"></i> Lihat detail
+                  </button>
+
+                  <a href="?page=order" class="btn btn-brand btn-sm">
+                    <i class="bi bi-bag-check me-1"></i> Pesan
                   </a>
                 </div>
-              </div>
-            </div>
-
-            <div class="collapse mt-3" id="detail-<?= $m['id'] ?>">
-              <div class="p-3 rounded-4" style="background: rgba(11,127,117,.06); border: 1px solid rgba(11,127,117,.12);">
-                <div class="fw-semibold mb-1">Rasa</div>
-                <div class="text-muted-2" style="line-height:1.7;"><?= $m['taste'] ?></div>
-
-                <hr class="soft my-3">
-
-                <div class="fw-semibold mb-1">Komposisi kasar</div>
-                <div class="text-muted-2" style="line-height:1.7;"><?= $m['comp'] ?></div>
               </div>
             </div>
 
           </div>
         </div>
       <?php endforeach; ?>
+    </div>
+
+    <div class="text-muted-2 small mt-3">
+      *Bahan/topping bisa menyesuaikan ketersediaan (tanpa mengurangi rasa utama).
     </div>
   </section>
 
@@ -163,8 +166,8 @@
 
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-2 mb-3">
           <div>
-            <h2 class="h4 fw-semibold mb-1">Daftar Menu Lainnya</h2>
-            <div class="text-muted-2">Klik untuk lihat detail rasa & komposisi.</div>
+            <h2 class="h4 fw-semibold mb-1">Menu Lainnya</h2>
+            <div class="text-muted-2">Klik untuk lihat rasa & bahan utama.</div>
           </div>
           <span class="badge-soft"><i class="bi bi-journal-text"></i> Lengkap</span>
         </div>
@@ -178,7 +181,7 @@
                         data-bs-target="#collapse<?= $m['id'] ?>"
                         aria-expanded="false"
                         aria-controls="collapse<?= $m['id'] ?>"
-                        style="background: rgba(255,255,255,.8);">
+                        style="background: rgba(255,255,255,.86);">
                   <div class="d-flex gap-3 align-items-center w-100">
                     <img
                       src="<?= $m['img'] ?>"
@@ -207,9 +210,9 @@
 
                   <hr class="soft my-3">
 
-                  <div class="fw-semibold mb-1">Komposisi kasar</div>
+                  <div class="fw-semibold mb-1">Bahan utama</div>
                   <div class="text-muted-2" style="line-height:1.7;">
-                    <?= $m['comp'] ?>
+                    <?= $m['ingredients'] ?>
                   </div>
                 </div>
               </div>
@@ -218,7 +221,7 @@
         </div>
 
         <div class="text-muted-2 small mt-3">
-          *Harga bisa berubah mengikuti ketersediaan bahan. Untuk event/ramai-ramai bisa request paket.
+          *Harga bisa berubah mengikuti ketersediaan bahan. Untuk pesanan ramai-ramai bisa request paket.
         </div>
 
       </div>
@@ -281,5 +284,72 @@
     </div>
 
   </section>
+
+  <!-- =========================
+       MODALS (AUTO GENERATED)
+       ========================= -->
+  <?php foreach($highlight as $m): ?>
+    <div class="modal fade" id="modal-<?= $m['id'] ?>" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content card-soft" style="border-radius: 18px; overflow:hidden;">
+          <div class="modal-header" style="background: rgba(11,127,117,.06); border-bottom: 1px solid rgba(2,6,23,.08);">
+            <div>
+              <div class="fw-semibold" style="font-size: 1.1rem;"><?= $m['name'] ?></div>
+              <div class="text-muted-2 small"><?= rupiah($m['price']) ?> / porsi</div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="d-flex gap-3 align-items-start">
+              <img src="<?= $m['img'] ?>"
+                   alt="<?= htmlspecialchars($m['name']) ?>"
+                   class="rounded-4"
+                   style="width:120px; height:120px; object-fit:cover;"
+                   onerror="this.src='https://dummyimage.com/600x600/eeeeee/777777&text=Foto+Menu';">
+              <div class="flex-grow-1">
+                <span class="badge-soft" style="<?= $m['tagStyle'] ?>">
+                  <i class="bi bi-award"></i> <?= $m['tag'] ?>
+                </span>
+                <div class="text-muted-2 small mt-2">
+                  *Bahan/topping bisa menyesuaikan ketersediaan.
+                </div>
+              </div>
+            </div>
+
+            <hr class="soft my-3">
+
+            <div class="fw-semibold mb-1">Rasa</div>
+            <div class="text-muted-2" style="line-height:1.75;">
+              <?= $m['taste'] ?>
+            </div>
+
+            <hr class="soft my-3">
+
+            <div class="fw-semibold mb-1">Bahan utama</div>
+            <div class="text-muted-2" style="line-height:1.75;">
+              <?= $m['ingredients'] ?>
+            </div>
+
+            <hr class="soft my-3">
+
+            <div class="fw-semibold mb-1">Saran nikmat</div>
+            <div class="text-muted-2" style="line-height:1.75;">
+              <?= $m['pairing'] ?>
+            </div>
+          </div>
+
+          <div class="modal-footer" style="border-top: 1px solid rgba(2,6,23,.08);">
+            <button type="button" class="btn btn-outline-brand" data-bs-dismiss="modal">
+              Tutup
+            </button>
+            <a href="?page=order" class="btn btn-brand">
+              <i class="bi bi-bag-check me-1"></i> Pesan Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endforeach; ?>
 
 </main>
