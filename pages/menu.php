@@ -20,7 +20,7 @@
       [
         'id' => 'sala-original',
         'name' => 'Sala Lauak Original',
-        'price' => 6000,
+        'price' => 14000,
         'img' => 'assets/img/menu/sala-lauak.jpg',
         'tag' => 'Best Seller',
         'tagStyle' => 'background: rgba(244,166,65,.14); border-color: rgba(244,166,65,.22); color:#7a4d00;',
@@ -31,7 +31,7 @@
       [
         'id' => 'sala-pedas',
         'name' => 'Sala Lauak Pedas',
-        'price' => 6000,
+        'price' => 14000,
         'img' => 'assets/img/menu/sala-lauak-isi.jpg', // ganti sala-lauak-pedas.jpg kalau ada
         'tag' => 'Pedas Favorit',
         'tagStyle' => 'background: rgba(243,166,200,.16); border-color: rgba(243,166,200,.24); color:#8b2f4a;',
@@ -42,7 +42,7 @@
       [
         'id' => 'es-tebak',
         'name' => 'Es Tebak',
-        'price' => 6000,
+        'price' => 15000,
         'img' => 'assets/img/menu/es-tebak.jpg',
         'tag' => 'Favorit Keluarga',
         'tagStyle' => 'background: rgba(11,127,117,.10); border-color: rgba(11,127,117,.18); color: var(--primary);',

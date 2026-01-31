@@ -43,7 +43,7 @@
           <i class="bi bi-phone me-1"></i> Pesan Online (Delivery)
         </h2>
         <div class="text-muted-2" style="line-height:1.7;">
-          Pilih platform favorit kamu. Klik salah satu untuk menuju halaman toko (fiktif) kami.
+          Pilih platform favorit kamu. Klik untuk melihat halaman toko kami di aplikasi.
         </div>
       </div>
       <span class="badge-soft"><i class="bi bi-lightning-charge"></i> Praktis</span>
@@ -54,23 +54,15 @@
         [
           'name' => 'GoFood',
           'desc' => 'Pesan cepat, cocok buat delivery & pickup.',
-          'href' => 'https://gofood.co.id/fiktif-cafe-a5',
+          'image' => 'order/gofood.jpg',
           'logo' => 'assets/img/gofood.jpg',
           'bg'   => 'rgba(244,166,65,.10)',
           'brd'  => 'rgba(244,166,65,.22)'
         ],
         [
-          'name' => 'GrabFood',
-          'desc' => 'Banyak promo, layanan antar praktis.',
-          'href' => 'https://food.grab.com/fiktif-cafe-a5',
-          'logo' => 'assets/img/grabfood.jpg',
-          'bg'   => 'rgba(11,127,117,.08)',
-          'brd'  => 'rgba(11,127,117,.18)'
-        ],
-        [
           'name' => 'ShopeeFood',
           'desc' => 'Cocok buat yang suka diskon & voucher.',
-          'href' => 'https://shopee.co.id/fiktif-cafe-a5',
+          'image' => 'order/shopeefood.jpg',
           'logo' => 'assets/img/shopeefood.jpg',
           'bg'   => 'rgba(243,166,200,.12)',
           'brd'  => 'rgba(243,166,200,.22)'
@@ -80,7 +72,7 @@
 
     <div class="row g-3 g-lg-4">
       <?php foreach($partners as $p): ?>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="card-soft p-3 h-100" style="background: <?= $p['bg'] ?>; border-color: <?= $p['brd'] ?>;">
             <div class="d-flex gap-3 align-items-center">
               <div
@@ -107,16 +99,15 @@
               </div>
             </div>
 
-            <a href="<?= $p['href'] ?>" target="_blank" class="btn btn-brand w-100 mt-3">
+            <!-- Tombol untuk buka gambar fullscreen -->
+            <button type="button" 
+                    class="btn btn-brand w-100 mt-3" 
+                    onclick="openAppImage('<?= $p['name'] ?>', '<?= $p['image'] ?>')">
               <i class="bi bi-box-arrow-up-right me-1"></i> Buka <?= $p['name'] ?>
-            </a>
+            </button>
           </div>
         </div>
       <?php endforeach; ?>
-    </div>
-
-    <div class="text-muted-2 small mt-3">
-      *Link platform di atas adalah contoh (fiktif) untuk keperluan tampilan website.
     </div>
   </section>
 
@@ -127,7 +118,7 @@
     </h2>
 
     <ol class="text-muted-2" style="line-height:1.8;">
-      <li>Buka aplikasi GoFood / GrabFood / ShopeeFood.</li>
+      <li>Buka aplikasi GoFood atau ShopeeFood.</li>
       <li>Cari: <strong>Cafe A5 – Sala Lauak & Es Tebak</strong>.</li>
       <li>Pilih menu yang diinginkan.</li>
       <li>Masukkan ke keranjang.</li>
@@ -141,10 +132,58 @@
       <div class="text-muted-2 mb-2">
         Kalau ada kendala saat memesan, silakan hubungi admin.
       </div>
-      <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-brand">
+      <!-- PAKE LINK WHATSAPP STANDARD -->
+      <a href="https://api.whatsapp.com/send?phone=6283891066629&text=Halo%20Admin%20Cafe%20A5%2C%20saya%20ingin%20bertanya%20tentang%20pemesanan." 
+         target="_blank" 
+         class="btn btn-brand">
         <i class="bi bi-whatsapp me-1"></i> Hubungi Admin
       </a>
     </div>
   </section>
 
 </main>
+
+<!-- Modal untuk tampilkan gambar fullscreen -->
+<div class="modal fade" id="appImageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-white" id="modalTitle">Cafe A5</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img id="modalImage" src="" alt="" class="img-fluid" style="max-height: 90vh; object-fit: contain;">
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function openAppImage(appName, imageUrl) {
+  console.log('Membuka gambar:', imageUrl);
+  
+  document.getElementById('modalTitle').textContent = 'Cafe A5 di ' + appName;
+  
+  var imgElement = document.getElementById('modalImage');
+  imgElement.src = imageUrl;
+  
+  imgElement.onerror = function() {
+    console.error('Gagal load gambar:', imageUrl);
+    this.src = 'https://dummyimage.com/800x1400/333/fff&text=Cafe+A5+di+' + encodeURIComponent(appName);
+    this.alt = 'Screenshot ' + appName + ' (gambar tidak ditemukan)';
+  };
+  
+  imgElement.onload = function() {
+    console.log('Gambar berhasil load');
+    var modal = new bootstrap.Modal(document.getElementById('appImageModal'));
+    modal.show();
+  };
+  
+  if (imgElement.complete) {
+    imgElement.onload();
+  }
+}
+</script>
