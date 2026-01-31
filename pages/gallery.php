@@ -160,15 +160,6 @@
             'icon'  => 'bi-shop'
           ],
           [
-            'title' => 'UKS',
-            'desc'  => 'Tersedia ruang UKS untuk kondisi darurat ringan.',
-            'img'   => 'assets/img/facilities/p3k.jpeg',
-            'badge_bg' => 'rgba(11,127,117,.08)',
-            'badge_border' => 'rgba(11,127,117,.18)',
-            'badge_color' => 'var(--primary)',
-            'icon'  => 'bi-heart-pulse'
-          ],
-          [
             'title' => 'Tempat Sampah',
             'desc'  => 'Tempat sampah terpisah untuk menjaga kebersihan dan membantu daur ulang.',
             'img'   => 'assets/img/facilities/daur-ulang.jpeg',
