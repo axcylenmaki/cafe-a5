@@ -26,8 +26,8 @@
       <div class="col-lg-5">
         <div class="fw-semibold mb-1">Alamat</div>
         <div class="text-muted-2 mb-2">
-          SMKN 71 Jakarta  
-          Jl. Dr. KRT Radjiman Widyodiningrat,  
+          SMKN 71 Jakarta<br>
+          Jl. Dr. KRT Radjiman Widyodiningrat,<br>
           Cakung, Jakarta Timur, DKI Jakarta
         </div>
 
@@ -38,8 +38,8 @@
           <li>Akses mudah dari Jalan Raya Bekasi</li>
         </ul>
 
-        <a 
-          href="https://www.google.com/maps/search/SMKN+71+Jakarta" 
+        <a
+          href="https://www.google.com/maps/search/SMKN+71+Jakarta"
           target="_blank"
           class="btn btn-brand mt-2"
         >
@@ -72,15 +72,15 @@
         </h2>
 
         <p class="text-muted-2 mb-3">
-          Untuk pemesanan, kerja sama, atau pertanyaan, silakan hubungi kami melalui:
+          Untuk pemesanan, kerja sama, atau pertanyaan, silakan hubungi admin melalui WhatsApp:
         </p>
 
-        <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-brand w-100 mb-2">
+        <a
+          href="https://wa.me/6283891066629"
+          target="_blank"
+          class="btn btn-brand w-100"
+        >
           <i class="bi bi-whatsapp me-1"></i> Chat WhatsApp Admin
-        </a>
-
-        <a href="mailto:cafea5@gmail.com" class="btn btn-outline-brand w-100">
-          <i class="bi bi-envelope me-1"></i> Kirim Email
         </a>
       </div>
     </div>
@@ -93,21 +93,25 @@
         </h2>
 
         <div class="d-grid gap-2">
-          <a href="https://instagram.com/cafea5" target="_blank" class="btn btn-outline-brand">
-            <i class="bi bi-instagram me-1"></i> Instagram Cafe A5
+          <a
+            href="https://www.instagram.com/afive.group?igsh=bmRlZDEzbDc4anZt"
+            target="_blank"
+            class="btn btn-outline-brand"
+          >
+            <i class="bi bi-instagram me-1"></i> Instagram A5 Group
           </a>
 
-          <a href="https://youtube.com/@cafea5" target="_blank" class="btn btn-outline-brand">
-            <i class="bi bi-youtube me-1"></i> YouTube Cafe A5
-          </a>
-
-          <a href="mailto:cafea5@gmail.com" class="btn btn-outline-brand">
-            <i class="bi bi-envelope-at me-1"></i> Email Resmi
+          <a
+            href="https://www.tiktok.com/@a5heritagecafe?_r=1&_t=ZS-93aF9BMI07m"
+            target="_blank"
+            class="btn btn-outline-brand"
+          >
+            <i class="bi bi-tiktok me-1"></i> TikTok A5 Heritage Cafe
           </a>
         </div>
 
         <div class="text-muted-2 small mt-3">
-          Ikuti kami untuk info menu terbaru, promo, dan kegiatan cafe.
+          Follow kami untuk update menu, promo, dan aktivitas terbaru.
         </div>
       </div>
     </div>
