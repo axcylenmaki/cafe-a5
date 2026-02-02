@@ -276,9 +276,12 @@
           <i class="bi bi-bag-check me-1"></i> Pesan Sekarang
         </a>
 
-        <a href="?page=contact" class="btn btn-outline-brand mt-2 w-100">
-          <i class="bi bi-chat-dots me-1"></i> Tanya Admin
-        </a>
+<a href="https://wa.me/6283891066629" 
+   target="_blank" 
+   class="btn btn-outline-brand mt-2 w-100">
+  <i class="bi bi-whatsapp me-1"></i> Tanya Admin
+</a>
+
 
       </div>
     </div>

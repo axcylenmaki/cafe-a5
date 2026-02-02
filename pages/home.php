@@ -5,6 +5,19 @@
     <div class="row g-4 align-items-center">
 
       <div class="col-lg-7">
+        <!-- LOGO -->
+<div class="d-flex align-items-center gap-3 mb-3">
+<img
+  src="assets/img/logo.png"
+  alt="Logo A5 Group"
+  style="height:56px; width:56px; object-fit:cover; border-radius:50%;"
+>
+
+  <div class="fw-semibold" style="font-size:1.2rem;">
+    A5 Group
+  </div>
+</div>
+
         <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
           <span class="badge-soft">
             <i class="bi bi-stars"></i> Nuansa Minang • Family Friendly

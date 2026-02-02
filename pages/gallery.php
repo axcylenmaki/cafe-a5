@@ -276,9 +276,10 @@
         box.innerHTML = `
           <div class="fw-semibold text-danger mb-2">Mohon maaf atas ketidaknyamanannya 😔</div>
           <div class="text-muted-2 mb-2">Silakan sampaikan keluhan langsung ke admin agar bisa segera kami perbaiki.</div>
-          <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-brand">
-            <i class="bi bi-whatsapp me-1"></i> Hubungi Admin
-          </a>
+<a href="https://wa.me/6283891066629" target="_blank" class="btn btn-brand">
+  <i class="bi bi-whatsapp me-1"></i> Hubungi Admin
+</a>
+
         `;
       }
     });
